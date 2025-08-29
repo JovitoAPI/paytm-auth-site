@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paytm Money Auth</title>
+  <meta charset="UTF-8">
+  <title>Paytm Money Authentication</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 24px; max-width: 760px; margin: auto; }
+    a.btn { display:inline-block; padding:12px 18px; border-radius:10px; border:1px solid #111; text-decoration:none; }
+    a.btn:hover { background:#111; color:#fff; }
+  </style>
 </head>
 <body>
-    <h1>🚀 Paytm Money Authentication</h1>
-    <p>Click below to authorize with Paytm Money:</p>
-    <a href="/authorize">
-        <button>Authorize with Paytm Money</button>
-    </a>
+  <h1>🚀 Paytm Money Authentication</h1>
+  <p>Click below to authorize with Paytm Money:</p>
+
+  <!-- Replace YOUR_CLIENT_ID_HERE with your real Paytm Money Client ID (public) -->
+  <a class="btn" href="https://developer.paytmmoney.com/accounts-openapi/oauth2/authorize
+?client_id=b1928e80f02b43eea5551c257d238674
+&response_type=code
+&scope=openid
+&redirect_uri=https%3A%2F%2Fpaytm-auth-site.vercel.app%2Fcallback
+&state=jovito-demo" >
+    Authorize with Paytm Money
+  </a>
+
+  <p style="margin-top: 24px; color:#666">After you log in and approve, you'll be sent back to <code>/callback</code> where the code will be shown.</p>
 </body>
 </html>
